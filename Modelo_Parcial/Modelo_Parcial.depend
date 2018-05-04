@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1525464979 source:c:\test\mmadou\estructurasenc\modelo_parcial\main.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1525473706 c:\test\mmadou\estructurasenc\modelo_parcial\funciones.h
+
+1525473746 source:c:\test\mmadou\estructurasenc\modelo_parcial\funciones.c
+	"funciones.h"
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
