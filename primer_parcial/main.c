@@ -27,8 +27,8 @@ int main()
   int flagAux=1;
   int flagIngreso=1;
 
-        ePropietario propietario[CantPropietarios];
-        eIngresoyEgreso ingresoEgreso [CantLugares];
+    ePropietario propietario[CantPropietarios];
+    eIngresoyEgreso ingresoEgreso [CantLugares];
 
       indicePropietario(propietario, CantPropietarios);
       cargarPropietario(propietario, 4);
@@ -37,7 +37,7 @@ int main()
       cargarIngresos(ingresoEgreso, 10);
 do
 {
-printf("\n===== BIENVENIDO Al Estaciionamiento =======\n\n");
+printf("\n===== BIENVENIDO Al Estacionamiento =======\n\n");
 printf ("\n 1- Alta Propietarios");
 printf ("\n 2- Modificacion Propietario");
 printf ("\n 3- Baja Propietario");

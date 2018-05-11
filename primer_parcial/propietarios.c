@@ -168,7 +168,7 @@ void cargarPropietario(ePropietario propietarios[], int tamanio)
  */
 void mostrarCliente (ePropietario users[], int tamanio, int flag)
 {
-    int i;
+
             if(flag==0)
             {
                 printf("\n\n\n======================\n NO HAY PROPIETARIOS CARGADOS\n======================\n");

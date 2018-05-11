@@ -16,7 +16,7 @@
 	"funciones.h"
 	"propietarios.h"
 
-1525782561 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\main.c
+1526038653 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -25,7 +25,7 @@
 	"propietarios.h"
 	"ingresoEgresos.h"
 
-1525782910 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\propietarios.c
+1526039837 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\propietarios.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -33,7 +33,7 @@
 	"propietarios.h"
 	"ingresoEgresos.h"
 
-1525783064 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\funciones.c
+1526037247 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include <time.h>
 
 #include "funciones.h"
 #include "propietarios.h"
@@ -69,10 +70,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
     {
      int i;
      int j;
-     int k;
-     int l;
-     int m;
-     int n;
      int idClienteAux;
      int auxMarca;
      int flagProp=0;
@@ -168,16 +165,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
  */
  void finzalarIngreso(eIngresoyEgreso ingreso [], ePropietario propiestarios[],int CantLugares, int CantPropietarios)
  {
-     int i;
-     int j;
-     int k;
-     int l;
-     int m;
-     int idAlquilerAux;
-     int idClienteAux;
-     int idEquipoAux;
-     int auxTiempo;
-     char seguir;
      int flag=0;
 
     flag=egresarAuto(ingreso, propiestarios,CantLugares, CantPropietarios);
@@ -191,8 +178,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
          }
 }
 
-
-
 /** \brief recorre propietarios, busca el ingreso , LA DA POR FINALIZADA
  *
  * \param ARRAY ESTRUCTURA de ingresos
@@ -204,7 +189,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
  */
 int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLugares, int CantPropietarios)
   {
-        int i;
         int j;
         int m;
       int precioFinal;
@@ -274,7 +258,7 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
 /** \brief MOSTRAR 1 ingreso
  *
  * \param array de estructura DE ingreso
- * \param  tamaño del arraY
+ * \param  tamaño del array
  * \return
  *
  */
@@ -297,7 +281,7 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
          break;
      }
 
-     printf("\nIngreso: %d\ Propietario: %d Marca: %s Hr Ingreso:%d  Estado %d " ,ingreso.idIngresoEgreso , ingreso.idPropietario, auxMarca ,ingreso.hora, ingreso.status);
+     printf("\nIngreso: %d\ Propietario: %d Marca: %s Hr Ingreso:%d  Estado: %d " ,ingreso.idIngresoEgreso , ingreso.idPropietario, auxMarca ,ingreso.hora, ingreso.status);
  }
 
 
