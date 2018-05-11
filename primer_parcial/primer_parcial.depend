@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1525782758 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\ingresoegresos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1526037267 c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\funciones.h
+
+1525782957 c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\propietarios.h
+
+1526037911 c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\ingresoegresos.h
+	"funciones.h"
+	"propietarios.h"
+
+1525782561 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1525782910 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\propietarios.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1525783064 source:c:\users\mariano\desktop\tecnicatura-utn\programacion y laboratorio i\ejercicios&tp's\primer_parcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
