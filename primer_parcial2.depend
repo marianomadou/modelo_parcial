@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1526069784 source:c:\test\mmadou\primer_parcial\primer_parcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1526074747 c:\test\mmadou\primer_parcial\primer_parcial\funciones.h
+
+1526074728 c:\test\mmadou\primer_parcial\primer_parcial\propietarios.h
+
+1526074789 c:\test\mmadou\primer_parcial\primer_parcial\ingresoegresos.h
+	"funciones.h"
+	"propietarios.h"
+
+1526077695 source:c:\test\mmadou\primer_parcial\primer_parcial\ingresoegresos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<time.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1526077280 source:c:\test\mmadou\primer_parcial\primer_parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
+1526077462 source:c:\test\mmadou\primer_parcial\primer_parcial\propietarios.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	"propietarios.h"
+	"ingresoEgresos.h"
+
