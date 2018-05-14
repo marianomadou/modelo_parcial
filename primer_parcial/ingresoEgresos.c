@@ -15,13 +15,6 @@
 #define Otro 4
 
 
-/** \brief inicializa los estados a cero
- *
- * \param array de estructura
- * \param  tamaño del array
- * \return
- *
- */
 void indiceIngresoyEgreso(eIngresoyEgreso ingresos [], int tamanio)
 {
     int i;
@@ -32,13 +25,6 @@ void indiceIngresoyEgreso(eIngresoyEgreso ingresos [], int tamanio)
     }
 }
 
-/** \brief carga inicial de ingresos para poder operar
- *
- * \param array de estrcutura
- * \param  tamanio del arrau
- * \return
- *
- */
 void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
 {
     int i;
@@ -57,16 +43,7 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
     }
    }
 
-/** \brief recibir ingreso
- *
- * \param ARRAY ESTRUCTURA de ingresos
- * \param ARRAY ESTRUCTURA de propietarios
- * \param CANT DE ingresos
- * \param CANT DE propietarios
- * \return
- *
- */
- void recibiringreso(eIngresoyEgreso ingreso [], ePropietario propiestarios[],int CantLugares, int CantPropietarios)
+void recibiringreso(eIngresoyEgreso ingreso [], ePropietario propiestarios[],int CantLugares, int CantPropietarios)
     {
      int i;
      int j;
@@ -75,9 +52,9 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
      int flagProp=0;
      int flagIndex=0;
 
-        for (i=0; i <CantLugares; i++) // recorro los lugares disponible
+        for (i=0; i <CantLugares; i++)
         {
-        if (ingreso[i].status==0) // busco el indice disponible  de ingreso
+        if (ingreso[i].status==0)
         {
         flagIndex=1;
 
@@ -85,7 +62,7 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
         printf("\n\nIngrese el id del propietario ingresante :");
         scanf("%d", &idClienteAux);
 
-        for(j=0; j<CantPropietarios;j++) //recorro propietarios
+        for(j=0; j<CantPropietarios;j++)
         {
             if(propiestarios[j].idPropietario== idClienteAux)
             {
@@ -105,7 +82,7 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
                 do{
                 printf("\n 1- Alpha_Romeo");
                 printf("\n 2- Ferrari");
-                printf("\n 3- Audio");
+                printf("\n 3- Audi");
                 printf("\n 4- Otro");
                 printf("\nIngrese la marca:\t");
                 scanf("%d", &auxMarca);
@@ -132,7 +109,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
                 } while (auxMarca==0);
                  break;
             }
-
             }
        if (flagProp==0)
             {
@@ -153,16 +129,6 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
     }
  }
 
-
- /** \brief FINALIZAR ingreso
- *
- * \param ARRAY ESTRUCTURA de ingresos
- * \param ARRAY ESTRUCTURA de propietarios
- * \param CANT DE ingresos
- * \param CANT DE propietarios
- * \return
- *
- */
  void finzalarIngreso(eIngresoyEgreso ingreso [], ePropietario propiestarios[],int CantLugares, int CantPropietarios)
  {
      int flag=0;
@@ -170,27 +136,14 @@ void cargarIngresos(eIngresoyEgreso ingresos [], int tamanio)
     flag=egresarAuto(ingreso, propiestarios,CantLugares, CantPropietarios);
     if (flag==0)
          {
-             printf("\n\n=========== No existe la ingreso ==============\n");
-         }
-    else
-         {
-
+             printf("\n\n=========== No existe el auto ingresado ingreso ==============\n");
          }
 }
 
-/** \brief recorre propietarios, busca el ingreso , LA DA POR FINALIZADA
- *
- * \param ARRAY ESTRUCTURA de ingresos
- * \param ARRAY ESTRUCTURA de propietarioss
- * \param CANT DE ingresos
- * \param CANT DE propietarios
- * \return
- *
- */
 int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLugares, int CantPropietarios)
   {
-        int j;
-        int m;
+    int j;
+    int m;
       int precioFinal;
       int idClienteAux;
       int auxTiempo;
@@ -200,14 +153,14 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
 
         auxTiempo=devolverHorasEstadia();
 
-    listaringreso(ingresoss, CantLugares);
+        listaringreso(ingresoss, CantLugares);
 
-    printf("\n\nIngrese el id de INGRESO que desea dar de baja :");
-    scanf("%d", &idClienteAux);
+        printf("\n\nIngrese el id de INGRESO que desea dar de baja :");
+        scanf("%d", &idClienteAux);
 
-       for (j=0; j<CantLugares; j++) // recorro los clientes
+       for (j=0; j<CantLugares; j++)
         {
-           if (idClienteAux==ingresoss[j].idIngresoEgreso) // si el cliente es igual al que busco
+           if (idClienteAux==ingresoss[j].idIngresoEgreso)
                 {
                 flag=1;
                 ingresoss[j].status=0;
@@ -254,15 +207,7 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
           return flag;
 }
 
-
-/** \brief MOSTRAR 1 ingreso
- *
- * \param array de estructura DE ingreso
- * \param  tamaño del array
- * \return
- *
- */
- void mostraringreso (eIngresoyEgreso ingreso)
+void mostraringreso (eIngresoyEgreso ingreso)
   {
      char auxMarca [20];
      switch (ingreso.marca)
@@ -281,18 +226,10 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
          break;
      }
 
-     printf("\nIngreso: %d\ Propietario: %d Marca: %s Hr Ingreso:%d  Estado: %d " ,ingreso.idIngresoEgreso , ingreso.idPropietario, auxMarca ,ingreso.hora, ingreso.status);
+     printf("\nIngreso: %d Propietario: %d Marca: %s Hr Ingreso:%d  Estado: %d " ,ingreso.idIngresoEgreso , ingreso.idPropietario, auxMarca ,ingreso.hora, ingreso.status);
  }
 
-
- /** \brief LISTADO DE ingresos
- *
- * \param array de estructura DE ingreso
- * \param  tamanio del array
- * \return
- *
- */
- void listaringreso (eIngresoyEgreso ingreso [], int tamanio)
+void listaringreso (eIngresoyEgreso ingreso [], int tamanio)
  {
       int i;
       printf("\n\n\n========================\n AUTOS INGRESADOS \n========================\n");
@@ -306,14 +243,7 @@ int egresarAuto(eIngresoyEgreso ingresoss[], ePropietario cliente[],int CantLuga
                 }
  }
 
- /** \brief
- *
- * \param
- * \param
- * \return
- *
- */
-
+//ESPERAR HASTA QUE DIGAN QUE HACER CON ESTO
 int devolverHorasEstadia()
 {
     int horas;

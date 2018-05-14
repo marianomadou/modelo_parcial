@@ -2,19 +2,40 @@
 #include <stdio.h>
 #include <stdlib.h>
 
- #include "funciones.h"
+#include "funciones.h"
 #include "propietarios.h"
 #include "ingresoEgresos.h"
 
 
+void indicePropietario(ePropietario usuarios[], int tamanio)
+{
+    int i;
+    for (i=0 ; i<tamanio;i++)
+    {
+    usuarios[i].status=0;
+     }
+}
 
-/** \brief ALTA DE CLIENTE
- *
- * \param array de estrcutrad de socio
- * \param tama�o del array
- * \return numero de index
- *
- */
+void cargarPropietario(ePropietario propietarios[], int tamanio)
+{
+    int i;
+    int id[]= {1,2,3,4};
+    char nombre[][20]= {"Juan ","Luis ","Maria","Jose "};
+    char tarjeta[][20]= {"111-111","222-222","333-333","444-444"};
+    char direccion[][20]= {"mitre","urquiza","belgrano","alsina"};
+
+  for(i=0;i<tamanio;i++)
+    {
+    propietarios[i].idPropietario=id[i];
+    strcpy(propietarios[i].nombreyApellido, nombre[i]);
+    strcpy(propietarios[i].direccion, direccion[i]);
+    strcpy(propietarios[i].tarjetaCredito, tarjeta[i]);
+    propietarios[i].status=1;
+
+    }
+
+}
+
 int  altaCliente (ePropietario propietario[], int tamanio)
 {
     int flag=0;
@@ -58,13 +79,6 @@ int  altaCliente (ePropietario propietario[], int tamanio)
 
 }
 
-/** \brief buscar el primer index vacion en la usuarios/cliente/socio
- *
- * \param array de estrcutrad de socio
- * \param tama�o del array
- * \return numero de index
- *
- */
 int searchIndexpropietario ( ePropietario status[], int tamanio)
 {
     int index=-1;
@@ -80,71 +94,17 @@ int searchIndexpropietario ( ePropietario status[], int tamanio)
     return index;
 }
 
-
-/** \brief lleva a CERO todo el indice de status de  la estrcutura usuario/cliente/socio
- *
- * \param estructura de usuarios/cliente/socio
- * \param tamanio total del array de usuarios/cliente/socio
- * \return
- *
- */
-void indicePropietario(ePropietario usuarios[], int tamanio)
-{
-    int i;
-    for (i=0 ; i<tamanio;i++)
-    {
-    usuarios[i].status=0;
-     }
-}
-/** \brief Carga de Datos Inicial para poder operar
- *
- * \param estructura de usuarios/cliente/socio
- * \param tamanio total del array de usuarios/cliente/socio
- * \return
- *
- */
-void cargarPropietario(ePropietario propietarios[], int tamanio)
-{
-    int i;
-    int id[]= {1,2,3,4};
-    char nombre[][20]= {"Juan","Luis","Maria","Jose"};
-    char tarjeta[][20]= {"111-111","222-222","333-333","444-444"};
-    char direccion[][20]= {"mitre","urquiza","belgrano","alsina"};
-
-  for(i=0;i<tamanio;i++)
-    {
-    propietarios[i].idPropietario=id[i];
-    strcpy(propietarios[i].nombreyApellido, nombre[i]);
-    strcpy(propietarios[i].direccion, direccion[i]);
-    strcpy(propietarios[i].tarjetaCredito, tarjeta[i]);
-    propietarios[i].status=1;
-
-    }
-
-}
-
-
-/** \brief mostrar 1 datos de 1 usuario/socio/cliente
- *
- * \param  un punto de la estrcutura de usuario/socio/cliente
- * \return
- *
- */
-
-
-  void showOneClient (ePropietario usuarios)
+void showOneClient (ePropietario usuarios)
 {
  printf("\nidProp %d  Nombre y Apellido: %s   Direccion %s   Tarjeta :%s   e:%d"  , usuarios.idPropietario , usuarios.nombreyApellido , usuarios.direccion,usuarios.tarjetaCredito, usuarios.status);
 }
 
-/** \brief mostrar listado de usuario/socio/cliente
- *
- * \param  array estrcutura de usuario/socio/cliente
- * \param  cantidad maxima de usuario/socio/cliente
- * \return
- *
- */
-  void listadoDePropietario (ePropietario users [], int tamanio)
+void showOneClient2 (ePropietario usuarios)
+{
+ printf("\nid: %d - %s - %s - %s   estado: %d ", usuarios.idPropietario , usuarios.nombreyApellido , usuarios.direccion,usuarios.tarjetaCredito, usuarios.status);
+}
+
+void listadoDePropietario (ePropietario users [], int tamanio)
  {
       int i;
       printf("\n\n\n========================\n PROPIETARIOS CARGADOS\n========================\n");
@@ -154,18 +114,22 @@ void cargarPropietario(ePropietario propietarios[], int tamanio)
                     {
                         showOneClient(users[i]);
                     }
-
-                }
+            }
  }
 
- /** \brief mostrar listado de usuario/socio/cliente
- *
- * \param  array estrcutura de usuario/socio/cliente
- * \param  cantidad maxima de usuario/socio/cliente
-  * \param  flag general de carga de usuarios;
- * \return
- *
- */
+void listadoDePropietario2 (ePropietario users [], int tamanio)
+ {
+      int i;
+      printf("\n\n\n========================\n PROPIETARIOS CARGADOS\n========================\n");
+                for (i=0; i<tamanio; i++)
+                {
+                    if (users[i].status==1)
+                    {
+                        showOneClient2(users[i]);
+                    }
+            }
+ }
+
 void mostrarCliente (ePropietario users[], int tamanio, int flag)
 {
 
@@ -178,19 +142,21 @@ void mostrarCliente (ePropietario users[], int tamanio, int flag)
                 listadoDePropietario(users, tamanio);
                 printf("\n========================================================================\n");
             }
-
-
 }
 
-/** \brief DAR DE BAJA UN USUARIO PASANDO A 2 SU STATUS
- *
- * \param array estructura de usuario/socio/cliente
- * \param tamanio de usuario/socio/cliente
- * \param flag de prexistencia de carga de usuario/socio/cliente
- * \return
- *
- */
+void mostrarCliente2 (ePropietario users[], int tamanio, int flag)
+{
 
+            if(flag==0)
+            {
+                printf("\n\n\n======================\n NO HAY PROPIETARIOS CARGADOS\n======================\n");
+            }
+            else
+            {
+                listadoDePropietario2(users, tamanio);
+                printf("\n========================================================================\n");
+            }
+}
 
 void bajaCliente(ePropietario users[], int tamanio, int flag)
 {
@@ -222,7 +188,7 @@ int confirm;
                                     }
                             }
 
-                if (flagDelete==0)
+                if (flagDelete==1)
                          {
 
                             printf("\n\n=====================================\n");
@@ -262,16 +228,6 @@ int confirm;
 }
 
 
-/** \brief modificacion de usuario/socio/cliente
- *
-* \param array estructura de usuario/socio/cliente
- * \param tamanio de usuario/socio/cliente
- * \param flag de prexistencia de carga de usuario/socio/cliente
- * \return
- * \return
- *
- */
-
  void modificarPropietario (ePropietario users[], int tamanio, int flag)
  {
      int i;
@@ -296,7 +252,7 @@ int confirm;
                                     }
                             }
 
-               if (flagchange==0)
+               if (flagchange==1)
                          {
 
                             printf("\n\n=====================================\n");

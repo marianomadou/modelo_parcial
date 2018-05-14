@@ -37,7 +37,7 @@ int main()
       cargarIngresos(ingresoEgreso, 10);
 do
 {
-printf("\n===== BIENVENIDO Al Estacionamiento =======\n\n");
+printf("\n===== BIENVENIDO Al DELUXE PUERTO MADERO =======\n\n");
 printf ("\n 1- Alta Propietarios");
 printf ("\n 2- Modificacion Propietario");
 printf ("\n 3- Baja Propietario");
@@ -90,15 +90,16 @@ scanf("%d", &opcion);
            }
 
             break;
-            /*
+
          case 6:
             printf("\n ============ Consultas ================ \n");
-            if (flagSocios==1 && flagAmbu == 1 )
+            if (flagProp==1)
             {
-              menuLlamadas(llamada,socios,ambulancias,CantLlamadas,CantSocios, CantAmbulancias);
+              mostrarCliente2 (propietario, CantLugares, CantPropietarios);
+              listaringreso (ingresoEgreso,CantLugares);
             }
             cleanScreen();
-            break;*/
+            break;
         case 0:
             printf("\n ============ Usted ha salido ================ \n");
             break;
